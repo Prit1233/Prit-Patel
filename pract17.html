@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //let hours;
+       // // let minutes;
+       // // let second;
+
+       // // let date = new Date
+       // // date.getHours(hours)
+       // // date.getMinutes(minutes)
+       // // date.getSeconds(second)
+
+       // // setInterval(() => {
+       //     // date.setSeconds(date.getSeconds() + 1);
+       //     // let formattedTime = date.toLocaleTimeString('en-US', {hour24:false})
+       //     // document.write(`${formattedTime}<br>`);
+       // // },1000)
+    //    function set_time(){
+        // let date = new Date()
+    
+        // let Time= date.toLocaleTimeString()
+
+        // console.log(Time);
+    //    }
+       let count =0;
+       let Interval = setInterval(function(){
+
+         count +=1
+
+        if(count ===5){
+            clearInterval(Interval)
+        }
+        let date = new Date()
+
+        let Time=date.toLocaleTimeString()
+        console.log(Time);
+        
+       },1000)
+    
+    </script>
+
+</body>
+</html>

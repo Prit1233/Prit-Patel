@@ -1,0 +1,40 @@
+<!-- Write a JavaScript function to compute the factors of a positive integer.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Factors</title>
+</head>
+<body>
+    <h1>Factor Finder</h1>
+
+    <label for="numberInput">Enter a positive integer: </label>
+    <input type="number" id="numberInput" min="1" required>
+    
+    <button onclick="findFactors()">Find Factors</button>
+
+    <p id="result"></p>
+
+    <script>
+        function findFactors() {
+          const input = document.getElementById("numberInput").value; // Get user input
+          const number = parseInt(input); // Convert input to an integer
+    
+          if (isNaN(number) || number <= 0) { // Validate input
+            document.getElementById("result").textContent = "Please enter a valid positive integer.";
+            return;
+          }
+    
+          const factors = [];
+          for (let i = 1; i <= number; i++) { // Find factors
+            if (number % i === 0) {
+              factors.push(i);
+            }
+          }
+    
+          document.getElementById("result").textContent = `Factors of ${number}: ${factors.join(", ")}`; // Display result
+        }
+    </script>
+</body>
+</html>
